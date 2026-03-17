@@ -18,9 +18,9 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
   const isStory = format === '1080x1920'
   const isPortrait = format === '1080x1350'
 
-  const labelSize = isStory ? 22 : 20
-  const textSize = isStory ? 40 : isPortrait ? 34 : 32
-  const ctaSize = isStory ? 20 : 19
+  const labelSize = isStory ? 26 : 24
+  const textSize = isStory ? 50 : isPortrait ? 42 : 40
+  const ctaSize = isStory ? 24 : 22
 
   // Content area excludes safe zones; split into two halves
   const contentHeight = height - safe.top - safe.bottom
@@ -188,7 +188,7 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides, height: 48, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides, height: 56, objectFit: 'contain' }}
       />
     </div>
   )

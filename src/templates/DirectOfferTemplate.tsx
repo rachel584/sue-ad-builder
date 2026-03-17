@@ -23,11 +23,11 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
   const isStory = format === '1080x1920'
   const isPortrait = format === '1080x1350'
 
-  const courseSize = isStory ? 56 : isPortrait ? 50 : 48
-  const valueSize = isStory ? 28 : isPortrait ? 24 : 22
-  const benefitSize = isStory ? 24 : isPortrait ? 20 : 19
-  const detailSize = isStory ? 22 : 20
-  const ctaSize = isStory ? 22 : 20
+  const courseSize = isStory ? 68 : isPortrait ? 62 : 58
+  const valueSize = isStory ? 34 : isPortrait ? 30 : 28
+  const benefitSize = isStory ? 30 : isPortrait ? 26 : 24
+  const detailSize = isStory ? 26 : 24
+  const ctaSize = isStory ? 26 : 24
 
   return (
     <div
@@ -40,21 +40,22 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        paddingTop: safe.top,
+        paddingTop: data.photo ? height * 0.32 : safe.top,
         paddingBottom: safe.bottom,
         paddingLeft: safe.sides,
         paddingRight: safe.sides,
       }}
     >
-      {/* Photo panel (right side) */}
+      {/* Photo strip — top of frame */}
       {data.photo && (
         <div style={{
           position: 'absolute',
           top: 0,
+          left: 0,
           right: 0,
-          width: isStory ? '100%' : '40%',
-          height: isStory ? '40%' : '100%',
+          height: '38%',
           overflow: 'hidden',
+          zIndex: 0,
         }}>
           <img
             src={data.photo}
@@ -63,19 +64,17 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              objectPosition: 'center top',
+              objectPosition: 'center center',
             }}
           />
-          {/* Gradient overlay for text readability */}
+          {/* Gradient fade into background */}
           <div style={{
             position: 'absolute',
-            top: 0,
+            bottom: 0,
             left: 0,
             right: 0,
-            bottom: 0,
-            background: isStory
-              ? 'linear-gradient(to top, #FFE5E5 15%, transparent 60%)'
-              : 'linear-gradient(to right, #FFE5E5 10%, transparent 50%)',
+            height: '50%',
+            background: 'linear-gradient(to top, #FFE5E5, transparent)',
           }} />
         </div>
       )}
@@ -86,7 +85,7 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
           position: 'absolute',
           top: 0,
           left: 0,
-          right: data.photo && !isStory ? '40%' : 0,
+          right: 0,
           height: 6,
           backgroundColor: colors.coral,
         }}
@@ -101,7 +100,7 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
           color: colors.black,
           lineHeight: 1.2,
           marginBottom: 16,
-          maxWidth: data.photo && !isStory ? '55%' : '90%',
+          maxWidth: '90%',
           position: 'relative',
           zIndex: 1,
         }}
@@ -138,7 +137,7 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
           >
             <span style={{
               color: colors.coral,
-              fontSize: 20,
+              fontSize: 24,
               fontWeight: 700,
               fontFamily: fonts.body,
               lineHeight: 1,
@@ -227,7 +226,7 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides, height: 48, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides, height: 56, objectFit: 'contain' }}
       />
     </div>
   )

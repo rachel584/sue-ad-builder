@@ -17,7 +17,7 @@ export const PatternInterruptTemplate: React.FC<Props> = ({ data, format }) => {
   const safe = getSafePadding(format)
   const isStory = format === '1080x1920'
 
-  const headlineSize = isStory ? 80 : format === '1080x1350' ? 72 : 66
+  const headlineSize = isStory ? 100 : format === '1080x1350' ? 90 : 84
 
   // Render headline with optional accent word in coral
   const renderHeadline = () => {
@@ -98,7 +98,7 @@ export const PatternInterruptTemplate: React.FC<Props> = ({ data, format }) => {
               border: `2px solid ${colors.coral}`,
               color: colors.coral,
               fontFamily: fonts.body,
-              fontSize: 19,
+              fontSize: 22,
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: 1.5,

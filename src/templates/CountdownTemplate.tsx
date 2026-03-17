@@ -19,12 +19,12 @@ export const CountdownTemplate: React.FC<Props> = ({ data, format }) => {
   const safe = getSafePadding(format)
   const isStory = format === '1080x1920'
 
-  const lastSize = isStory ? 30 : 24
-  const numberSize = isStory ? 200 : format === '1080x1350' ? 180 : 160
-  const seatsSize = isStory ? 30 : 24
-  const courseSize = isStory ? 44 : format === '1080x1350' ? 38 : 36
-  const detailSize = isStory ? 22 : 20
-  const ctaSize = isStory ? 22 : 19
+  const lastSize = isStory ? 34 : 30
+  const numberSize = isStory ? 260 : format === '1080x1350' ? 240 : 220
+  const seatsSize = isStory ? 34 : 30
+  const courseSize = isStory ? 54 : format === '1080x1350' ? 46 : 44
+  const detailSize = isStory ? 26 : 24
+  const ctaSize = isStory ? 24 : 22
 
   return (
     <div
@@ -148,7 +148,7 @@ export const CountdownTemplate: React.FC<Props> = ({ data, format }) => {
       <div
         style={{
           position: 'absolute',
-          bottom: safe.bottom + 40,
+          bottom: safe.bottom + 80,
           left: '50%',
           transform: 'translateX(-50%)',
         }}
@@ -173,7 +173,7 @@ export const CountdownTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, left: '50%', transform: 'translateX(-50%)', height: 48, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, left: '50%', transform: 'translateX(-50%)', height: 56, objectFit: 'contain' }}
       />
     </div>
   )

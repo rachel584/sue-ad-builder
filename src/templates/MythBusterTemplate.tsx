@@ -16,8 +16,8 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
   const { width, height } = formats[format]
   const safe = getSafePadding(format)
 
-  const labelSize = format === '1080x1920' ? 20 : 17
-  const textSize = format === '1080x1920' ? 44 : format === '1080x1350' ? 38 : 36
+  const labelSize = format === '1080x1920' ? 24 : 22
+  const textSize = format === '1080x1920' ? 54 : format === '1080x1350' ? 46 : 44
 
   const halfWidth = width / 2
 
@@ -158,7 +158,7 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
             <span
               style={{
                 fontFamily: fonts.body,
-                fontSize: 18,
+                fontSize: 22,
                 fontWeight: 700,
                 color: colors.white,
                 textTransform: 'uppercase',
@@ -175,7 +175,7 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + (data.cta ? 65 : 14), left: '50%', transform: 'translateX(-50%)', height: 48, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + (data.cta ? 65 : 14), left: '50%', transform: 'translateX(-50%)', height: 56, objectFit: 'contain' }}
       />
     </div>
   )

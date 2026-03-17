@@ -19,9 +19,9 @@ export const LeadMagnetTemplate: React.FC<Props> = ({ data, format }) => {
   const isStory = format === '1080x1920'
   const isPortrait = format === '1080x1350'
 
-  const headlineSize = isStory ? 50 : isPortrait ? 46 : 44
-  const bulletSize = isStory ? 24 : isPortrait ? 22 : 20
-  const ctaSize = isStory ? 22 : 19
+  const headlineSize = isStory ? 62 : isPortrait ? 56 : 54
+  const bulletSize = isStory ? 30 : isPortrait ? 26 : 24
+  const ctaSize = isStory ? 24 : 22
   const mockupWidth = isStory ? 280 : isPortrait ? 240 : 220
 
   return (
@@ -45,7 +45,7 @@ export const LeadMagnetTemplate: React.FC<Props> = ({ data, format }) => {
       <div
         style={{
           fontFamily: fonts.body,
-          fontSize: 16,
+          fontSize: 20,
           fontWeight: 700,
           color: colors.coral,
           textTransform: 'uppercase',
@@ -211,7 +211,7 @@ export const LeadMagnetTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, left: safe.sides, height: 48, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides, height: 56, objectFit: 'contain' }}
       />
     </div>
   )

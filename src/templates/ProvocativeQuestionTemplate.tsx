@@ -18,9 +18,9 @@ export const ProvocativeQuestionTemplate: React.FC<Props> = ({ data, format }) =
   const isStory = format === '1080x1920'
   const isPortrait = format === '1080x1350'
 
-  const questionSize = isStory ? 64 : isPortrait ? 58 : 54
-  const subtextSize = isStory ? 30 : isPortrait ? 26 : 24
-  const decorSize = isStory ? 500 : isPortrait ? 420 : 380
+  const questionSize = isStory ? 80 : isPortrait ? 72 : 66
+  const subtextSize = isStory ? 38 : isPortrait ? 32 : 30
+  const decorSize = isStory ? 600 : isPortrait ? 520 : 480
 
   return (
     <div
@@ -110,7 +110,7 @@ export const ProvocativeQuestionTemplate: React.FC<Props> = ({ data, format }) =
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, left: safe.sides, height: 48, objectFit: 'contain', zIndex: 1 }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, left: safe.sides, height: 56, objectFit: 'contain', zIndex: 1 }}
       />
     </div>
   )

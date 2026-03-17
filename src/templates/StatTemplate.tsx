@@ -18,9 +18,9 @@ export const StatTemplate: React.FC<Props> = ({ data, format }) => {
   const safe = getSafePadding(format)
   const isStory = format === '1080x1920'
 
-  const statSize = isStory ? 200 : format === '1080x1350' ? 180 : 160
-  const phraseSize = isStory ? 44 : format === '1080x1350' ? 38 : 34
-  const ctaSize = isStory ? 22 : 20
+  const statSize = isStory ? 280 : format === '1080x1350' ? 240 : 220
+  const phraseSize = isStory ? 56 : format === '1080x1350' ? 48 : 44
+  const ctaSize = isStory ? 26 : 24
 
   return (
     <div
@@ -59,7 +59,7 @@ export const StatTemplate: React.FC<Props> = ({ data, format }) => {
 
       {/* CTA button */}
       <div style={{ position: 'absolute', bottom: safe.bottom + 60, left: safe.sides + 20 }}>
-        <div style={{ backgroundColor: colors.coral, color: colors.white, fontFamily: fonts.body, fontSize: ctaSize, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, padding: '18px 40px', borderRadius: 4 }}>
+        <div style={{ backgroundColor: colors.coral, color: colors.white, fontFamily: fonts.body, fontSize: ctaSize, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, padding: '20px 48px', borderRadius: 4 }}>
           {data.cta}
         </div>
       </div>
@@ -68,7 +68,7 @@ export const StatTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, left: safe.sides + 20, height: 48, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides + 20, height: 56, objectFit: 'contain' }}
       />
     </div>
   )
