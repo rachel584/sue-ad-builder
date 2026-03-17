@@ -11,7 +11,7 @@ import { BeforeAfterTemplate, type BeforeAfterData } from './templates/BeforeAft
 import { LeadMagnetTemplate, type LeadMagnetData } from './templates/LeadMagnetTemplate'
 import { DirectOfferTemplate, type DirectOfferData } from './templates/DirectOfferTemplate'
 import { CountdownTemplate, type CountdownData } from './templates/CountdownTemplate'
-import { formats, type FormatKey, type Language, colors } from './brand'
+import { formats, type FormatKey, type Language, colors, photos } from './brand'
 
 // ── Template registry ──────────────────────────────────────────────
 type TemplateType =
@@ -131,7 +131,7 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
       date: 'May 15\u201316, 2026',
       location: 'Amsterdam',
       cta: 'Enroll Now \u2014 Limited Seats',
-      photo: '/sue-online-learning.jpg',
+      photo: photos.onlineLearning,
     },
     {
       courseName: 'Behavioural Design for AI Adoption',
@@ -141,7 +141,7 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
       date: 'On-demand',
       location: 'Online',
       cta: 'Start Today',
-      photo: '/sue-tom-teaching.jpg',
+      photo: photos.tomTeaching,
     },
   ],
   countdown: [
@@ -236,7 +236,7 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
       date: '15\u201316 mei 2026',
       location: 'Amsterdam',
       cta: 'Schrijf je nu in',
-      photo: '/sue-online-learning.jpg',
+      photo: photos.onlineLearning,
     },
     {
       courseName: 'Behavioural Design voor AI Adoptie',
@@ -246,7 +246,7 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
       date: 'On-demand',
       location: 'Online',
       cta: 'Start vandaag',
-      photo: '/sue-tom-teaching.jpg',
+      photo: photos.tomTeaching,
     },
   ],
   countdown: [

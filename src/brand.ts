@@ -44,25 +44,28 @@ export const getSafePadding = (format: FormatKey) => {
   return safeZones[format]
 }
 
+// Base URL — adapts to GitHub Pages (/sue-ad-builder/) vs local dev (/)
+const BASE = import.meta.env.BASE_URL
+
 // Logo paths (served from /public)
 export const logos = {
-  bol: '/sue-bol.png',              // Coral circle logo (for dark backgrounds)
-  academy: '/sue-logo-academy.png', // Horizontal: bol + "Behavioural Design Academy"
-} as const
+  bol: `${BASE}sue-bol.png`,
+  academy: `${BASE}sue-logo-academy.png`,
+}
 
 // Photography from May 2025 SUE Academy photoshoot (served from /public)
 export const photos = {
-  tomTeaching: '/sue-tom-teaching.jpg',           // Tom presenting to class
-  studioSpace: '/sue-studio-space.jpg',           // SUE warehouse studio with long table
-  trainerPresenting: '/sue-trainer-presenting.jpg', // Trainer with Influence Framework whiteboard
-  onlineLearning: '/sue-online-learning.jpg',     // Laptop with BD Fundamentals course open
-  workshopMaterials: '/sue-workshop-materials.jpg', // Behavioural Statement worksheets + SUE mug
-  classroomGroup: '/sue-classroom-group.jpg',     // Students at tables, engaged
-  classroomWide: '/sue-classroom-wide.jpg',       // Wide shot: trainer presenting to full room
-  studioBreak: '/sue-studio-break.jpg',           // Break time in studio, motion blur
-  studentsEngaged: '/sue-students-engaged.jpg',   // Participants focused, taking notes
-  conversation: '/sue-conversation.jpg',          // Informal conversation in lounge area
-} as const
+  tomTeaching: `${BASE}sue-tom-teaching.jpg`,
+  studioSpace: `${BASE}sue-studio-space.jpg`,
+  trainerPresenting: `${BASE}sue-trainer-presenting.jpg`,
+  onlineLearning: `${BASE}sue-online-learning.jpg`,
+  workshopMaterials: `${BASE}sue-workshop-materials.jpg`,
+  classroomGroup: `${BASE}sue-classroom-group.jpg`,
+  classroomWide: `${BASE}sue-classroom-wide.jpg`,
+  studioBreak: `${BASE}sue-studio-break.jpg`,
+  studentsEngaged: `${BASE}sue-students-engaged.jpg`,
+  conversation: `${BASE}sue-conversation.jpg`,
+}
 
 export type PhotoKey = keyof typeof photos
 

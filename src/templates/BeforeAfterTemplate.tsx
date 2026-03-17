@@ -186,7 +186,7 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
 
       {/* Logo on the After side */}
       <img
-        src="/sue-logo-academy.png"
+        src={logos.academy}
         alt="SUE Behavioural Design Academy"
         style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides, height: 48, objectFit: 'contain' }}
       />
