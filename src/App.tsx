@@ -97,10 +97,10 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
     { quote: 'Design thinking gave us empathy. Behavioural design gave us results.', attribution: '\u2014 UX Director, SaaS Company', cta: 'Get Results' },
   ],
   beforeAfter: [
-    { before: 'We assumed employees resisted change because they didn\u2019t care.', after: 'We learned they resisted because the change wasn\u2019t designed for how humans actually work.', cta: 'Transform Your Approach' },
-    { before: 'We optimized campaigns for clicks and impressions.', after: 'We optimized for how people actually make decisions.', cta: 'Discover Behavioural Design' },
-    { before: 'We gave people more options to help them choose.', after: 'We gave them fewer, better-framed options \u2014 and conversions tripled.', cta: 'Learn the Framework' },
-    { before: 'We rolled out AI tools and mandated adoption.', after: 'We redesigned the context and adoption happened naturally.', cta: 'Design for Behaviour' },
+    { before: 'They resisted because they didn\u2019t care.', after: 'They resisted because the change was badly designed.', cta: 'Transform Your Approach' },
+    { before: 'Optimized for clicks.', after: 'Optimized for decisions.', cta: 'Discover Behavioural Design' },
+    { before: 'More options. More confusion.', after: 'Fewer options. Triple conversions.', cta: 'Learn the Framework' },
+    { before: 'Mandated AI adoption.', after: 'Designed for natural adoption.', cta: 'Design for Behaviour' },
   ],
   leadMagnet: [
     {
@@ -202,10 +202,10 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
     { quote: 'Design thinking gaf ons empathie. Behavioural design gaf ons resultaten.', attribution: '\u2014 UX Director, SaaS Bedrijf', cta: 'Krijg resultaten' },
   ],
   beforeAfter: [
-    { before: 'We dachten dat medewerkers verandering tegenhielden omdat het ze niet boeide.', after: 'We leerden dat ze tegenhielden omdat de verandering niet was ontworpen voor hoe mensen echt werken.', cta: 'Transformeer je aanpak' },
-    { before: 'We optimaliseerden campagnes op clicks en vertoningen.', after: 'We optimaliseerden op hoe mensen daadwerkelijk beslissingen nemen.', cta: 'Ontdek Behavioural Design' },
-    { before: 'We gaven mensen meer opties om hen te helpen kiezen.', after: 'We gaven minder, beter geframede opties \u2014 en conversies verdrievoudigden.', cta: 'Leer het framework' },
-    { before: 'We rolden AI-tools uit en verplichtten adoptie.', after: 'We herontwierpen de context en adoptie gebeurde vanzelf.', cta: 'Ontwerp voor gedrag' },
+    { before: 'Ze hielden tegen omdat het ze niet boeide.', after: 'Ze hielden tegen door slecht ontwerp.', cta: 'Transformeer je aanpak' },
+    { before: 'Geoptimaliseerd op clicks.', after: 'Geoptimaliseerd op beslissingen.', cta: 'Ontdek Behavioural Design' },
+    { before: 'Meer opties. Meer verwarring.', after: 'Minder opties. Drie keer meer conversies.', cta: 'Leer het framework' },
+    { before: 'AI-adoptie verplicht.', after: 'Adoptie vanzelf ontworpen.', cta: 'Ontwerp voor gedrag' },
   ],
   leadMagnet: [
     {

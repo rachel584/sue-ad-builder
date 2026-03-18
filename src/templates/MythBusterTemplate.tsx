@@ -131,9 +131,9 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
         style={{
           position: 'absolute',
           left: halfWidth - 2,
-          top: '15%',
+          top: '18%',
           width: 4,
-          height: '70%',
+          height: '50%',
           backgroundColor: colors.coral,
         }}
       />
@@ -175,7 +175,7 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + (data.cta ? 65 : 14), left: '50%', transform: 'translateX(-50%)', height: 56, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 20, right: safe.sides, height: 56, objectFit: 'contain' }}
       />
     </div>
   )

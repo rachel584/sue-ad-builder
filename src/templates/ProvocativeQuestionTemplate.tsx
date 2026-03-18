@@ -110,7 +110,7 @@ export const ProvocativeQuestionTemplate: React.FC<Props> = ({ data, format }) =
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, left: safe.sides, height: 56, objectFit: 'contain', zIndex: 1 }}
+        style={{ position: 'absolute', bottom: safe.bottom + 20, left: safe.sides, height: 64, objectFit: 'contain', zIndex: 1 }}
       />
     </div>
   )

@@ -41,18 +41,18 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
         width, height, position: 'relative', overflow: 'hidden',
         backgroundColor: colors.lightCoral2, display: 'flex', flexDirection: 'column',
         justifyContent: data.photo ? 'flex-end' : 'center', alignItems: 'flex-start',
-        paddingTop: safe.top, paddingBottom: safe.bottom + 90,
+        paddingTop: safe.top, paddingBottom: safe.bottom + 140,
         paddingLeft: safe.sides, paddingRight: safe.sides,
       }}
     >
-      {/* Photo strip — top of frame */}
+      {/* Photo strip — top of frame, clean edge (no gradient) */}
       {data.photo && (
         <div style={{
           position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
-          height: '40%',
+          height: '35%',
           overflow: 'hidden',
           zIndex: 0,
         }}>
@@ -63,17 +63,9 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              objectPosition: 'center center',
+              objectPosition: 'center 30%',
             }}
           />
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '50%',
-            background: 'linear-gradient(to top, #FFE5E5, transparent)',
-          }} />
         </div>
       )}
 
@@ -114,7 +106,7 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
       )}
 
       {/* CTA button */}
-      <div style={{ position: 'absolute', bottom: safe.bottom + 50, left: safe.sides, zIndex: 1 }}>
+      <div style={{ position: 'absolute', bottom: safe.bottom + 80, left: safe.sides, zIndex: 1 }}>
         <div style={{ backgroundColor: colors.coral, color: colors.white, fontFamily: fonts.body, fontSize: ctaSize, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, padding: '18px 40px' }}>
           {data.cta}
         </div>

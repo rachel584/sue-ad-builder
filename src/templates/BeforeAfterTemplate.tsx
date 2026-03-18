@@ -97,15 +97,15 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
       >
         <div
           style={{
-            width: 32,
-            height: 32,
+            width: 48,
+            height: 48,
             borderRadius: '50%',
             backgroundColor: colors.coral,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: colors.white,
-            fontSize: 18,
+            fontSize: 28,
             fontFamily: fonts.body,
             fontWeight: 700,
           }}
@@ -114,8 +114,8 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
         </div>
         <div
           style={{
-            width: width - safe.sides * 2 - 44,
-            height: 2,
+            width: width - safe.sides * 2 - 60,
+            height: 4,
             backgroundColor: colors.coral,
           }}
         />

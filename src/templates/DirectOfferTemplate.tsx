@@ -46,14 +46,14 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
         paddingRight: safe.sides,
       }}
     >
-      {/* Photo strip — top of frame */}
+      {/* Photo strip — top of frame, clean edge */}
       {data.photo && (
         <div style={{
           position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
-          height: '38%',
+          height: '32%',
           overflow: 'hidden',
           zIndex: 0,
         }}>
@@ -64,18 +64,9 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              objectPosition: 'center center',
+              objectPosition: 'center 30%',
             }}
           />
-          {/* Gradient fade into background */}
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '50%',
-            background: 'linear-gradient(to top, #FFE5E5, transparent)',
-          }} />
         </div>
       )}
 
@@ -125,7 +116,7 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
 
       {/* Benefits with checkmarks */}
       <div style={{ marginBottom: 32 }}>
-        {data.benefits.slice(0, 3).map((benefit, i) => (
+        {data.benefits.slice(0, 2).map((benefit, i) => (
           <div
             key={i}
             style={{
@@ -205,7 +196,7 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
       </div>
 
       {/* CTA button */}
-      <div style={{ position: 'absolute', bottom: safe.bottom + 50, left: safe.sides }}>
+      <div style={{ position: 'absolute', bottom: safe.bottom + 80, left: safe.sides }}>
         <div
           style={{
             backgroundColor: colors.coral,
