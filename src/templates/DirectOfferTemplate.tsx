@@ -41,7 +41,7 @@ export const DirectOfferTemplate: React.FC<Props> = ({ data, format }) => {
         flexDirection: 'column',
         justifyContent: 'center',
         paddingTop: data.photo ? height * 0.32 : safe.top,
-        paddingBottom: safe.bottom,
+        paddingBottom: safe.bottom + 140,
         paddingLeft: safe.sides,
         paddingRight: safe.sides,
       }}
