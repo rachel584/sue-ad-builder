@@ -67,7 +67,7 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
     { headline: 'Nobody resists change. They resist bad design.', accentWord: 'bad design' },
   ],
   stat: [
-    { stat: '70%', phrase: 'of change projects fail. Yours doesn\u2019t have to.', cta: 'Get the Influence Framework' },
+    { stat: '70%', phrase: 'of change projects fail. Yours doesn\u2019t have to.', cta: 'Learn the Influence Framework' },
     { stat: '12%', phrase: 'of transformations succeed. The other 88% ignored how people actually change.', cta: 'Explore Behavioural Design' },
     { stat: '95%', phrase: 'of decisions are made unconsciously. Yet most marketing still targets the rational mind.', cta: 'Learn Behavioural Design' },
     { stat: '80%', phrase: 'of training participants never change their behaviour. The problem isn\u2019t the people.', cta: 'See a Better Way' },
@@ -160,14 +160,14 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
     { seatsLeft: 3, courseName: 'AI Deep Dive', date: 'April 24, 2026', location: 'Amsterdam', cta: 'Claim Your Seat' },
   ],
   framework: [
-    { title: 'The SUE Influence Framework', subtitle: 'A step-by-step method to design behaviour change.', frameworkImage: photos.influenceFrameworkEN, cta: 'Download the Framework' },
+    { title: 'The SUE Influence Framework', subtitle: 'A step-by-step method to design behaviour change.', frameworkImage: photos.influenceFrameworkEN, cta: 'Learn the Influence Framework' },
     { title: 'The 4C Flow Model', subtitle: 'From context to conversion in four steps.', frameworkImage: photos.fourCFlowEN, cta: 'Get the Full Model' },
   ],
   carouselSlide: [
     { slideNumber: 1, totalSlides: 5, title: '5 Steps to Change Any Behaviour', body: 'A practical guide based on behavioural science.', isFirst: true },
-    { slideNumber: 2, totalSlides: 5, title: 'Step 1: Map the Behaviour', body: 'Before you can change behaviour, you need to understand it. Who does what, when, and why?' },
-    { slideNumber: 3, totalSlides: 5, title: 'Step 2: Find the Barriers', body: 'What stops people from doing the desired behaviour? Think friction, anxiety, and habit.' },
-    { slideNumber: 4, totalSlides: 5, title: 'Step 3: Design the Nudge', body: 'Use cognitive biases and choice architecture to make the desired behaviour easy and attractive.' },
+    { slideNumber: 2, totalSlides: 5, title: 'Step 1: Map the Behaviour', body: 'Before you can change behaviour, you need to understand it. Who does what, when, and why?', icon: '\uD83D\uDDFA\uFE0F' },
+    { slideNumber: 3, totalSlides: 5, title: 'Step 2: Find the Barriers', body: 'What stops people from doing the desired behaviour? Think friction, anxiety, and habit.', icon: '\uD83D\uDEA7' },
+    { slideNumber: 4, totalSlides: 5, title: 'Step 3: Design the Nudge', body: 'Use cognitive biases and choice architecture to make the desired behaviour easy and attractive.', icon: '\uD83C\uDFAF' },
     { slideNumber: 5, totalSlides: 5, title: 'Ready to design behaviour?', body: '', isLast: true, cta: 'Explore the Academy' },
   ],
   thoughtLeader: [
@@ -176,7 +176,7 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
   ],
   documentAd: [
     {
-      documentTitle: 'The Behavioural Design Sprint Playbook',
+      documentTitle: 'The Behavioural Design Playbook',
       steps: [
         { number: '1', title: 'Define the Behavioural Challenge', description: 'Map who needs to do what differently and why they currently don\u2019t.' },
         { number: '2', title: 'Uncover the Hidden Barriers', description: 'Use the SWAC tool to find friction, anxiety, and missing triggers.' },
@@ -300,14 +300,14 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
     { seatsLeft: 3, courseName: 'AI Deep Dive', date: '24 april 2026', location: 'Amsterdam', cta: 'Claim je plek' },
   ],
   framework: [
-    { title: 'Het SUE Influence Framework', subtitle: 'Een stap-voor-stap methode om gedragsverandering te ontwerpen.', frameworkImage: photos.influenceFrameworkNL, cta: 'Download het Framework' },
+    { title: 'Het SUE Influence Framework', subtitle: 'Een stap-voor-stap methode om gedragsverandering te ontwerpen.', frameworkImage: photos.influenceFrameworkNL, cta: 'Leer het Influence Framework' },
     { title: 'Het 4C Flow Model', subtitle: 'Van context naar conversie in vier stappen.', frameworkImage: photos.fourCFlowNL, cta: 'Bekijk het model' },
   ],
   carouselSlide: [
     { slideNumber: 1, totalSlides: 5, title: '5 Stappen om Elk Gedrag te Veranderen', body: 'Een praktische gids op basis van gedragswetenschap.', isFirst: true },
-    { slideNumber: 2, totalSlides: 5, title: 'Stap 1: Breng het Gedrag in Kaart', body: 'Voordat je gedrag kunt veranderen, moet je het begrijpen. Wie doet wat, wanneer, en waarom?' },
-    { slideNumber: 3, totalSlides: 5, title: 'Stap 2: Vind de Barri\u00e8res', body: 'Wat houdt mensen tegen om het gewenste gedrag te vertonen? Denk aan frictie, angst en gewoonte.' },
-    { slideNumber: 4, totalSlides: 5, title: 'Stap 3: Ontwerp de Nudge', body: 'Gebruik cognitieve biases en keuzearchitectuur om het gewenste gedrag makkelijk en aantrekkelijk te maken.' },
+    { slideNumber: 2, totalSlides: 5, title: 'Stap 1: Breng het Gedrag in Kaart', body: 'Voordat je gedrag kunt veranderen, moet je het begrijpen. Wie doet wat, wanneer, en waarom?', icon: '\uD83D\uDDFA\uFE0F' },
+    { slideNumber: 3, totalSlides: 5, title: 'Stap 2: Vind de Barri\u00e8res', body: 'Wat houdt mensen tegen om het gewenste gedrag te vertonen? Denk aan frictie, angst en gewoonte.', icon: '\uD83D\uDEA7' },
+    { slideNumber: 4, totalSlides: 5, title: 'Stap 3: Ontwerp de Nudge', body: 'Gebruik cognitieve biases en keuzearchitectuur om het gewenste gedrag makkelijk en aantrekkelijk te maken.', icon: '\uD83C\uDFAF' },
     { slideNumber: 5, totalSlides: 5, title: 'Klaar om gedrag te ontwerpen?', body: '', isLast: true, cta: 'Ontdek de Academy' },
   ],
   thoughtLeader: [
@@ -316,7 +316,7 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
   ],
   documentAd: [
     {
-      documentTitle: 'Het Behavioural Design Sprint Playbook',
+      documentTitle: 'Het Behavioural Design Playbook',
       steps: [
         { number: '1', title: 'Definieer de Gedragsuitdaging', description: 'Breng in kaart wie wat anders moet doen en waarom ze dat nu niet doen.' },
         { number: '2', title: 'Ontdek de Verborgen Barri\u00e8res', description: 'Gebruik het SWAC-model om frictie, angst en ontbrekende triggers te vinden.' },

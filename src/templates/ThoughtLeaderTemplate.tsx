@@ -20,13 +20,13 @@ export const ThoughtLeaderTemplate: React.FC<Props> = ({ data, format }) => {
   const isStory = format === '1080x1920'
   const isPortrait = format === '1080x1350'
 
-  const nameSize = isStory ? 28 : isPortrait ? 24 : 22
-  const titleSize = isStory ? 20 : isPortrait ? 18 : 16
-  const insightSize = isStory ? 42 : isPortrait ? 36 : 34
-  const hashtagSize = isStory ? 22 : isPortrait ? 20 : 18
-  const avatarSize = isStory ? 100 : isPortrait ? 90 : 80
+  const nameSize = isStory ? 36 : isPortrait ? 32 : 30
+  const titleSize = isStory ? 26 : isPortrait ? 22 : 20
+  const insightSize = isStory ? 58 : isPortrait ? 52 : 48
+  const hashtagSize = isStory ? 24 : isPortrait ? 22 : 20
+  const avatarSize = isStory ? 120 : isPortrait ? 110 : 100
   const cardPadding = isStory ? 60 : isPortrait ? 50 : 44
-  const cardMarginX = safe.sides + 30
+  const cardMarginX = safe.sides + 16
 
   return (
     <div

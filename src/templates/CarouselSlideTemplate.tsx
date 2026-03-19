@@ -6,6 +6,7 @@ export interface CarouselSlideData {
   totalSlides: number
   title: string
   body: string
+  icon?: string        // Large emoji/icon for visual punch (System 1)
   isFirst?: boolean
   isLast?: boolean
   cta?: string
@@ -231,19 +232,25 @@ export const CarouselSlideTemplate: React.FC<Props> = ({ data, format }) => {
     >
       {renderProgressDots()}
 
-      {/* Large slide number */}
-      <div
-        style={{
-          fontFamily: fonts.headline,
-          fontSize: numberSize,
-          fontWeight: 700,
-          color: colors.coral,
-          lineHeight: 1,
-          marginBottom: 16,
-          opacity: 0.9,
-        }}
-      >
-        {String(data.slideNumber).padStart(2, '0')}
+      {/* Icon + slide number row */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 16 }}>
+        {data.icon && (
+          <div style={{ fontSize: isStory ? 80 : isPortrait ? 70 : 60, lineHeight: 1 }}>
+            {data.icon}
+          </div>
+        )}
+        <div
+          style={{
+            fontFamily: fonts.headline,
+            fontSize: numberSize,
+            fontWeight: 700,
+            color: colors.coral,
+            lineHeight: 1,
+            opacity: 0.9,
+          }}
+        >
+          {String(data.slideNumber).padStart(2, '0')}
+        </div>
       </div>
 
       {/* Title */}
