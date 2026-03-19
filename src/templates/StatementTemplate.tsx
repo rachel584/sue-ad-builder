@@ -22,6 +22,7 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
   const headlineSize = isStory ? 84 : format === '1080x1350' ? 72 : 68
   const supportSize = isStory ? 40 : format === '1080x1350' ? 36 : 34
   const ctaSize = isStory ? 26 : 24
+  const photoSize = isStory ? 280 : format === '1080x1350' ? 240 : 200
 
   const renderHeadline = () => {
     if (!data.highlight || !data.headline.includes(data.highlight)) return data.headline
@@ -40,21 +41,23 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
       style={{
         width, height, position: 'relative', overflow: 'hidden',
         backgroundColor: colors.lightCoral2, display: 'flex', flexDirection: 'column',
-        justifyContent: data.photo ? 'flex-end' : 'center', alignItems: 'flex-start',
-        paddingTop: safe.top, paddingBottom: safe.bottom + 140,
+        justifyContent: 'center', alignItems: 'flex-start',
+        paddingTop: safe.top, paddingBottom: safe.bottom + 160,
         paddingLeft: safe.sides, paddingRight: safe.sides,
       }}
     >
-      {/* Photo strip — top of frame, clean edge (no gradient) */}
+      {/* Photo — rounded accent in top-right corner */}
       {data.photo && (
         <div style={{
           position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: '35%',
+          top: safe.top + 20,
+          right: safe.sides + 10,
+          width: photoSize,
+          height: photoSize,
+          borderRadius: 16,
           overflow: 'hidden',
           zIndex: 0,
+          opacity: 0.9,
         }}>
           <img
             src={data.photo}
@@ -81,7 +84,7 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
         fontWeight: 700,
         color: colors.black,
         lineHeight: 1.25,
-        maxWidth: '90%',
+        maxWidth: data.photo ? '75%' : '90%',
         marginBottom: data.supporting ? 28 : 0,
         position: 'relative',
         zIndex: 1,
@@ -106,7 +109,7 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
       )}
 
       {/* CTA button */}
-      <div style={{ position: 'absolute', bottom: safe.bottom + 80, left: safe.sides, zIndex: 1 }}>
+      <div style={{ position: 'absolute', bottom: safe.bottom + 90, left: safe.sides, zIndex: 1 }}>
         <div style={{ backgroundColor: colors.coral, color: colors.white, fontFamily: fonts.body, fontSize: ctaSize, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, padding: '18px 40px' }}>
           {data.cta}
         </div>
@@ -116,7 +119,7 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides, height: 56, objectFit: 'contain', zIndex: 1 }}
+        style={{ position: 'absolute', bottom: safe.bottom + 20, right: safe.sides, height: 56, objectFit: 'contain', zIndex: 1 }}
       />
     </div>
   )

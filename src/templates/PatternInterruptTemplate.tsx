@@ -112,9 +112,9 @@ export const PatternInterruptTemplate: React.FC<Props> = ({ data, format }) => {
 
       {/* Logo */}
       <img
-        src={logos.bol}
-        alt="SUE"
-        style={{ position: 'absolute', bottom: safe.bottom + 20, left: safe.sides, height: 64, objectFit: 'contain' }}
+        src={logos.academy}
+        alt="SUE Behavioural Design Academy"
+        style={{ position: 'absolute', bottom: safe.bottom + 20, left: safe.sides, height: 56, objectFit: 'contain' }}
       />
     </div>
   )

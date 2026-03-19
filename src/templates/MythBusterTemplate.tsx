@@ -171,11 +171,11 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
         </div>
       )}
 
-      {/* Logo — centered bottom, above CTA */}
+      {/* Bol logo — bottom right, below CTA level */}
       <img
-        src={logos.academy}
-        alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 20, right: safe.sides, height: 56, objectFit: 'contain' }}
+        src={logos.bol}
+        alt="SUE"
+        style={{ position: 'absolute', bottom: data.cta ? safe.bottom + 8 : safe.bottom + 14, right: safe.sides + 10, height: 36, objectFit: 'contain' }}
       />
     </div>
   )

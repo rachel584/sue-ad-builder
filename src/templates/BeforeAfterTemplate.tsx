@@ -42,7 +42,7 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
         style={{
           width,
           height: safe.top + halfHeight,
-          backgroundColor: colors.lightCoral2,
+          backgroundColor: colors.warmGrey,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -56,27 +56,31 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
         <div
           style={{
             fontFamily: fonts.body,
-            fontSize: labelSize,
+            fontSize: labelSize * 0.85,
             fontWeight: 700,
-            color: colors.coral,
+            color: colors.darkGrey,
             textTransform: 'uppercase',
             letterSpacing: 3,
-            marginBottom: 16,
-            opacity: 0.8,
+            marginBottom: 12,
+            opacity: 0.6,
           }}
         >
           Before
         </div>
 
-        {/* Before text — regular weight, slightly muted */}
+        {/* Before text — muted, with strikethrough */}
         <div
           style={{
             fontFamily: fonts.headline,
-            fontSize: textSize,
+            fontSize: textSize * 0.9,
             fontWeight: 400,
             color: colors.darkGrey,
             lineHeight: 1.35,
             maxWidth: '88%',
+            textDecoration: 'line-through',
+            textDecorationColor: colors.coral,
+            textDecorationThickness: '3px',
+            opacity: 0.7,
           }}
         >
           {data.before}
@@ -126,7 +130,7 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
         style={{
           width,
           flex: 1,
-          backgroundColor: colors.lightCoral2,
+          backgroundColor: colors.white,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -155,7 +159,7 @@ export const BeforeAfterTemplate: React.FC<Props> = ({ data, format }) => {
         <div
           style={{
             fontFamily: fonts.headline,
-            fontSize: textSize * 1.05,
+            fontSize: textSize * 1.15,
             fontWeight: 700,
             color: colors.black,
             lineHeight: 1.3,
