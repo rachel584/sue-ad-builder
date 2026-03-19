@@ -65,6 +65,10 @@ export const photos = {
   studioBreak: `${BASE}sue-studio-break.jpg`,
   studentsEngaged: `${BASE}sue-students-engaged.jpg`,
   conversation: `${BASE}sue-conversation.jpg`,
+  influenceFrameworkNL: `${BASE}sue-influence-framework-nl.jpg`,
+  influenceFrameworkEN: `${BASE}sue-influence-framework-en.jpg`,
+  fourCFlowEN: `${BASE}sue-4c-flow-en.jpg`,
+  fourCFlowNL: `${BASE}sue-4c-flow-nl.jpg`,
 }
 
 export type PhotoKey = keyof typeof photos

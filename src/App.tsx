@@ -11,6 +11,10 @@ import { BeforeAfterTemplate, type BeforeAfterData } from './templates/BeforeAft
 import { LeadMagnetTemplate, type LeadMagnetData } from './templates/LeadMagnetTemplate'
 import { DirectOfferTemplate, type DirectOfferData } from './templates/DirectOfferTemplate'
 import { CountdownTemplate, type CountdownData } from './templates/CountdownTemplate'
+import { FrameworkTemplate, type FrameworkData } from './templates/FrameworkTemplate'
+import { CarouselSlideTemplate, type CarouselSlideData } from './templates/CarouselSlideTemplate'
+import { ThoughtLeaderTemplate, type ThoughtLeaderData } from './templates/ThoughtLeaderTemplate'
+import { DocumentAdTemplate, type DocumentAdData } from './templates/DocumentAdTemplate'
 import { formats, type FormatKey, type Language, colors, photos } from './brand'
 
 // ── Template registry ──────────────────────────────────────────────
@@ -19,12 +23,14 @@ type TemplateType =
   | 'statement' | 'quote'
   | 'beforeAfter' | 'leadMagnet'
   | 'directOffer' | 'countdown'
+  | 'framework' | 'carouselSlide' | 'thoughtLeader' | 'documentAd'
 
 type AnyData =
   | PatternInterruptData | StatData | ProvocativeQuestionData | MythBusterData
   | StatementData | QuoteData
   | BeforeAfterData | LeadMagnetData
   | DirectOfferData | CountdownData
+  | FrameworkData | CarouselSlideData | ThoughtLeaderData | DocumentAdData
 
 interface TemplateInfo {
   label: string
@@ -44,6 +50,10 @@ const templateInfo: Record<TemplateType, TemplateInfo> = {
   leadMagnet:       { label: 'Lead Magnet',        stage: 'MOFU', stageLabel: 'Consideration', description: 'Free guide + PDF mockup' },
   directOffer:      { label: 'Direct Offer',       stage: 'BOFU', stageLabel: 'Conversion', description: 'Course + benefits + price' },
   countdown:        { label: 'Countdown',          stage: 'BOFU', stageLabel: 'Conversion', description: 'Urgency / last seats' },
+  framework:        { label: 'Framework',          stage: 'TOFU', stageLabel: 'Awareness', description: 'Framework diagram visual' },
+  carouselSlide:    { label: 'Carousel Slide',     stage: 'MOFU', stageLabel: 'Consideration', description: 'Numbered carousel step' },
+  thoughtLeader:    { label: 'Thought Leader',     stage: 'MOFU', stageLabel: 'Consideration', description: 'Personal insight card' },
+  documentAd:       { label: 'Document Ad',        stage: 'MOFU', stageLabel: 'Consideration', description: 'Mini playbook preview' },
 }
 
 // ── Sample data per template (ENGLISH) ─────────────────────────────
@@ -148,6 +158,41 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
     { seatsLeft: 6, courseName: 'Behavioural Design Fundamentals x AI', date: 'May 15\u201316, 2026', location: 'Amsterdam', cta: 'Secure Your Spot' },
     { seatsLeft: 4, courseName: 'Advanced Behavioural Design', date: 'June 5\u20136, 2026', location: 'Amsterdam', cta: 'Register Now' },
     { seatsLeft: 3, courseName: 'AI Deep Dive', date: 'April 24, 2026', location: 'Amsterdam', cta: 'Claim Your Seat' },
+  ],
+  framework: [
+    { title: 'The SUE Influence Framework', subtitle: 'A step-by-step method to design behaviour change.', frameworkImage: photos.influenceFrameworkEN, cta: 'Download the Framework' },
+    { title: 'The 4C Flow Model', subtitle: 'From context to conversion in four steps.', frameworkImage: photos.fourCFlowEN, cta: 'Get the Full Model' },
+  ],
+  carouselSlide: [
+    { slideNumber: 1, totalSlides: 5, title: '5 Steps to Change Any Behaviour', body: 'A practical guide based on behavioural science.', isFirst: true },
+    { slideNumber: 2, totalSlides: 5, title: 'Step 1: Map the Behaviour', body: 'Before you can change behaviour, you need to understand it. Who does what, when, and why?' },
+    { slideNumber: 3, totalSlides: 5, title: 'Step 2: Find the Barriers', body: 'What stops people from doing the desired behaviour? Think friction, anxiety, and habit.' },
+    { slideNumber: 4, totalSlides: 5, title: 'Step 3: Design the Nudge', body: 'Use cognitive biases and choice architecture to make the desired behaviour easy and attractive.' },
+    { slideNumber: 5, totalSlides: 5, title: 'Ready to design behaviour?', body: '', isLast: true, cta: 'Explore the Academy' },
+  ],
+  thoughtLeader: [
+    { personName: 'Tom de Bruyne', personTitle: 'Co-founder, SUE Behavioural Design', personPhoto: photos.tomTeaching, insight: 'People don\u2019t resist change. They resist badly designed change.', hashtags: '#BehaviouralDesign #ChangeManagement #SUEAcademy' },
+    { personName: 'Astrid Groenewegen', personTitle: 'Co-founder, SUE Behavioural Design', personPhoto: photos.conversation, insight: 'The best nudge is the one people never notice \u2014 because it just feels natural.', hashtags: '#Nudging #BehaviouralScience #Ethics' },
+  ],
+  documentAd: [
+    {
+      documentTitle: 'The Behavioural Design Sprint Playbook',
+      steps: [
+        { number: '1', title: 'Define the Behavioural Challenge', description: 'Map who needs to do what differently and why they currently don\u2019t.' },
+        { number: '2', title: 'Uncover the Hidden Barriers', description: 'Use the SWAC tool to find friction, anxiety, and missing triggers.' },
+        { number: '3', title: 'Design Your Intervention', description: 'Apply cognitive biases and choice architecture to nudge the right behaviour.' },
+      ],
+      cta: 'Download the Playbook',
+    },
+    {
+      documentTitle: 'AI Adoption in 3 Steps',
+      steps: [
+        { number: '1', title: 'Diagnose the Resistance', description: 'Understand why people avoid AI tools \u2014 it\u2019s rarely about the technology.' },
+        { number: '2', title: 'Reduce the Friction', description: 'Make the first AI experience effortless and rewarding.' },
+        { number: '3', title: 'Build the Habit Loop', description: 'Design triggers and rewards that turn one-time use into daily practice.' },
+      ],
+      cta: 'Get the Guide',
+    },
   ],
 }
 
@@ -254,6 +299,41 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
     { seatsLeft: 4, courseName: 'Advanced Behavioural Design', date: '5\u20136 juni 2026', location: 'Amsterdam', cta: 'Schrijf je nu in' },
     { seatsLeft: 3, courseName: 'AI Deep Dive', date: '24 april 2026', location: 'Amsterdam', cta: 'Claim je plek' },
   ],
+  framework: [
+    { title: 'Het SUE Influence Framework', subtitle: 'Een stap-voor-stap methode om gedragsverandering te ontwerpen.', frameworkImage: photos.influenceFrameworkNL, cta: 'Download het Framework' },
+    { title: 'Het 4C Flow Model', subtitle: 'Van context naar conversie in vier stappen.', frameworkImage: photos.fourCFlowNL, cta: 'Bekijk het model' },
+  ],
+  carouselSlide: [
+    { slideNumber: 1, totalSlides: 5, title: '5 Stappen om Elk Gedrag te Veranderen', body: 'Een praktische gids op basis van gedragswetenschap.', isFirst: true },
+    { slideNumber: 2, totalSlides: 5, title: 'Stap 1: Breng het Gedrag in Kaart', body: 'Voordat je gedrag kunt veranderen, moet je het begrijpen. Wie doet wat, wanneer, en waarom?' },
+    { slideNumber: 3, totalSlides: 5, title: 'Stap 2: Vind de Barri\u00e8res', body: 'Wat houdt mensen tegen om het gewenste gedrag te vertonen? Denk aan frictie, angst en gewoonte.' },
+    { slideNumber: 4, totalSlides: 5, title: 'Stap 3: Ontwerp de Nudge', body: 'Gebruik cognitieve biases en keuzearchitectuur om het gewenste gedrag makkelijk en aantrekkelijk te maken.' },
+    { slideNumber: 5, totalSlides: 5, title: 'Klaar om gedrag te ontwerpen?', body: '', isLast: true, cta: 'Ontdek de Academy' },
+  ],
+  thoughtLeader: [
+    { personName: 'Tom de Bruyne', personTitle: 'Co-founder, SUE Behavioural Design', personPhoto: photos.tomTeaching, insight: 'Mensen verzetten zich niet tegen verandering. Ze verzetten zich tegen slecht ontworpen verandering.', hashtags: '#BehaviouralDesign #Verandermanagement #SUEAcademy' },
+    { personName: 'Astrid Groenewegen', personTitle: 'Co-founder, SUE Behavioural Design', personPhoto: photos.conversation, insight: 'De beste nudge is degene die mensen nooit opmerken \u2014 omdat het gewoon natuurlijk voelt.', hashtags: '#Nudging #Gedragswetenschap #Ethiek' },
+  ],
+  documentAd: [
+    {
+      documentTitle: 'Het Behavioural Design Sprint Playbook',
+      steps: [
+        { number: '1', title: 'Definieer de Gedragsuitdaging', description: 'Breng in kaart wie wat anders moet doen en waarom ze dat nu niet doen.' },
+        { number: '2', title: 'Ontdek de Verborgen Barri\u00e8res', description: 'Gebruik het SWAC-model om frictie, angst en ontbrekende triggers te vinden.' },
+        { number: '3', title: 'Ontwerp je Interventie', description: 'Pas cognitieve biases en keuzearchitectuur toe om het juiste gedrag te nudgen.' },
+      ],
+      cta: 'Download het Playbook',
+    },
+    {
+      documentTitle: 'AI Adoptie in 3 Stappen',
+      steps: [
+        { number: '1', title: 'Diagnose van de Weerstand', description: 'Begrijp waarom mensen AI-tools vermijden \u2014 het gaat zelden om de technologie.' },
+        { number: '2', title: 'Verminder de Frictie', description: 'Maak de eerste AI-ervaring moeiteloos en belonend.' },
+        { number: '3', title: 'Bouw de Gewoonte-loop', description: 'Ontwerp triggers en beloningen die eenmalig gebruik omzetten in dagelijkse praktijk.' },
+      ],
+      cta: 'Download de gids',
+    },
+  ],
 }
 
 // ── Funnel stage colors ─────────────────────────────────────────────
@@ -355,6 +435,10 @@ function App() {
       case 'leadMagnet':          return <LeadMagnetTemplate {...props} />
       case 'directOffer':         return <DirectOfferTemplate {...props} />
       case 'countdown':           return <CountdownTemplate {...props} />
+      case 'framework':           return <FrameworkTemplate {...props} />
+      case 'carouselSlide':       return <CarouselSlideTemplate {...props} />
+      case 'thoughtLeader':       return <ThoughtLeaderTemplate {...props} />
+      case 'documentAd':          return <DocumentAdTemplate {...props} />
     }
   }
 
