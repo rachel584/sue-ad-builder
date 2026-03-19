@@ -175,7 +175,7 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.bol}
         alt="SUE"
-        style={{ position: 'absolute', bottom: data.cta ? safe.bottom + 8 : safe.bottom + 14, right: safe.sides + 10, height: 48, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides + 10, height: 56, objectFit: 'contain' }}
       />
     </div>
   )

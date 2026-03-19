@@ -20,7 +20,7 @@ export const FrameworkTemplate: React.FC<Props> = ({ data, format }) => {
   const isPortrait = format === '1080x1350'
 
   const titleSize = isStory ? 42 : isPortrait ? 38 : 36
-  const subtitleSize = isStory ? 36 : isPortrait ? 32 : 30
+  const subtitleSize = isStory ? 48 : isPortrait ? 44 : 40
   const ctaSize = isStory ? 24 : 22
 
   return (
@@ -93,8 +93,8 @@ export const FrameworkTemplate: React.FC<Props> = ({ data, format }) => {
         </div>
       )}
 
-      {/* CTA + Logo — inline at bottom */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      {/* CTA + Logo — inline at bottom, pushed to edge */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
         <div
           style={{
             backgroundColor: colors.coral,

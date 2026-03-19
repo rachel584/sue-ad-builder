@@ -214,6 +214,8 @@ export const CarouselSlideTemplate: React.FC<Props> = ({ data, format }) => {
   }
 
   // Normal content slide
+  const watermarkSize = isStory ? 280 : isPortrait ? 240 : 200
+
   return (
     <div
       style={{
@@ -230,10 +232,27 @@ export const CarouselSlideTemplate: React.FC<Props> = ({ data, format }) => {
         paddingRight: safe.sides + 30,
       }}
     >
+      {/* Large watermark emoji — System 1 visual anchor */}
+      {data.icon && (
+        <div style={{
+          position: 'absolute',
+          top: isStory ? '35%' : '25%',
+          right: safe.sides - 20,
+          fontSize: watermarkSize,
+          lineHeight: 1,
+          opacity: 0.12,
+          userSelect: 'none',
+          pointerEvents: 'none',
+          zIndex: 0,
+        }}>
+          {data.icon}
+        </div>
+      )}
+
       {renderProgressDots()}
 
       {/* Icon + slide number row */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 16 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 16, position: 'relative', zIndex: 1 }}>
         {data.icon && (
           <div style={{ fontSize: isStory ? 80 : isPortrait ? 70 : 60, lineHeight: 1 }}>
             {data.icon}

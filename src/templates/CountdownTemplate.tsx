@@ -148,7 +148,7 @@ export const CountdownTemplate: React.FC<Props> = ({ data, format }) => {
       <div
         style={{
           position: 'absolute',
-          bottom: safe.bottom + 110,
+          bottom: safe.bottom + 130,
           left: '50%',
           transform: 'translateX(-50%)',
         }}
