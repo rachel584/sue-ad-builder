@@ -241,6 +241,7 @@ export const CarouselSlideTemplate: React.FC<Props> = ({ data, format }) => {
           fontSize: watermarkSize,
           lineHeight: 1,
           opacity: 0.12,
+          color: colors.lightCoral1,
           userSelect: 'none',
           pointerEvents: 'none',
           zIndex: 0,

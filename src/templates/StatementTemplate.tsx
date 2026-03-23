@@ -22,7 +22,6 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
   const headlineSize = isStory ? 84 : format === '1080x1350' ? 72 : 68
   const supportSize = isStory ? 40 : format === '1080x1350' ? 36 : 34
   const ctaSize = isStory ? 26 : 24
-  const photoSize = isStory ? 280 : format === '1080x1350' ? 240 : 200
 
   const renderHeadline = () => {
     if (!data.highlight || !data.headline.includes(data.highlight)) return data.headline
@@ -42,40 +41,12 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
         width, height, position: 'relative', overflow: 'hidden',
         backgroundColor: colors.lightCoral2, display: 'flex', flexDirection: 'column',
         justifyContent: 'center', alignItems: 'flex-start',
-        paddingTop: safe.top, paddingBottom: safe.bottom + 160,
+        paddingTop: safe.top, paddingBottom: safe.bottom + 140,
         paddingLeft: safe.sides, paddingRight: safe.sides,
       }}
     >
-      {/* Photo — rounded accent in top-right corner */}
-      {data.photo && (
-        <div style={{
-          position: 'absolute',
-          top: safe.top + 20,
-          right: safe.sides + 10,
-          width: photoSize,
-          height: photoSize,
-          borderRadius: 16,
-          overflow: 'hidden',
-          zIndex: 0,
-          opacity: 0.9,
-        }}>
-          <img
-            src={data.photo}
-            alt=""
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center 30%',
-            }}
-          />
-        </div>
-      )}
-
       {/* Coral accent bar at top */}
-      {!data.photo && (
-        <div style={{ position: 'absolute', top: 0, left: 0, width: 120, height: 6, backgroundColor: colors.coral }} />
-      )}
+      <div style={{ position: 'absolute', top: 0, left: 0, width: 120, height: 6, backgroundColor: colors.coral }} />
 
       {/* Headline */}
       <div style={{
@@ -84,7 +55,7 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
         fontWeight: 700,
         color: colors.black,
         lineHeight: 1.25,
-        maxWidth: data.photo ? '75%' : '90%',
+        maxWidth: '90%',
         marginBottom: data.supporting ? 28 : 0,
         position: 'relative',
         zIndex: 1,

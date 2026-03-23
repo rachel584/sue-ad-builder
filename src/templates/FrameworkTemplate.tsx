@@ -20,7 +20,7 @@ export const FrameworkTemplate: React.FC<Props> = ({ data, format }) => {
   const isPortrait = format === '1080x1350'
 
   const titleSize = isStory ? 42 : isPortrait ? 38 : 36
-  const subtitleSize = isStory ? 48 : isPortrait ? 44 : 40
+  const subtitleSize = isStory ? 67 : isPortrait ? 62 : 56
   const ctaSize = isStory ? 24 : 22
 
   return (

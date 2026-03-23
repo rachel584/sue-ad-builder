@@ -143,7 +143,7 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
         <div
           style={{
             position: 'absolute',
-            bottom: safe.bottom,
+            bottom: safe.bottom + 90,
             left: '50%',
             transform: 'translateX(-50%)',
           }}

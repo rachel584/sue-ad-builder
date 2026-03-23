@@ -21,7 +21,6 @@ export const QuoteTemplate: React.FC<Props> = ({ data, format }) => {
   const quoteSize = isStory ? 70 : format === '1080x1350' ? 62 : 56
   const attrSize = isStory ? 34 : format === '1080x1350' ? 28 : 26
   const ctaSize = isStory ? 26 : 24
-  const photoSize = isStory ? 280 : format === '1080x1350' ? 240 : 200
 
   return (
     <div
@@ -33,32 +32,6 @@ export const QuoteTemplate: React.FC<Props> = ({ data, format }) => {
         paddingLeft: safe.sides, paddingRight: safe.sides,
       }}
     >
-      {/* Photo — rounded accent in top-right corner */}
-      {data.photo && (
-        <div style={{
-          position: 'absolute',
-          top: safe.top + 20,
-          right: safe.sides + 10,
-          width: photoSize,
-          height: photoSize,
-          borderRadius: 16,
-          overflow: 'hidden',
-          zIndex: 0,
-          opacity: 0.9,
-        }}>
-          <img
-            src={data.photo}
-            alt=""
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center 30%',
-            }}
-          />
-        </div>
-      )}
-
       {/* Large coral quotation mark */}
       <div style={{
         fontFamily: fonts.headline,
@@ -82,7 +55,7 @@ export const QuoteTemplate: React.FC<Props> = ({ data, format }) => {
         fontWeight: 400,
         color: colors.black,
         lineHeight: 1.35,
-        maxWidth: data.photo ? '75%' : '90%',
+        maxWidth: '90%',
         marginBottom: 24,
         position: 'relative',
         zIndex: 1,
