@@ -1,10 +1,11 @@
 import React from 'react'
-import { colors, fonts, formats, getSafePadding, logos, type FormatKey } from '../brand'
+import { colors, fonts, formats, getSafePadding, logos, illustrations, type FormatKey, type IllustrationKey } from '../brand'
 
 export interface PatternInterruptData {
   headline: string       // Contrarian statement, 1-2 lines max
   accentWord?: string    // One word to render in coral (must appear in headline)
   cta?: string           // Optional — usually no CTA on image for TOFU
+  illustrationKey?: IllustrationKey  // Optional background accent illustration
 }
 
 interface Props {
@@ -110,11 +111,28 @@ export const PatternInterruptTemplate: React.FC<Props> = ({ data, format }) => {
         </div>
       )}
 
+      {/* Optional background accent illustration — large, low-opacity */}
+      {data.illustrationKey && (
+        <img
+          src={illustrations[data.illustrationKey]}
+          alt=""
+          style={{
+            position: 'absolute',
+            right: -20,
+            bottom: safe.bottom + 60,
+            height: isStory ? 400 : format === '1080x1350' ? 320 : 280,
+            objectFit: 'contain',
+            opacity: 0.10,
+            zIndex: 0,
+          }}
+        />
+      )}
+
       {/* Logo */}
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 20, left: safe.sides, height: 64, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 20, left: safe.sides, height: 64, objectFit: 'contain', zIndex: 1 }}
       />
     </div>
   )

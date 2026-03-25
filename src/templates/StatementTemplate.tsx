@@ -1,5 +1,5 @@
 import React from 'react'
-import { colors, fonts, formats, getSafePadding, logos, type FormatKey } from '../brand'
+import { colors, fonts, formats, getSafePadding, logos, illustrations, type FormatKey, type IllustrationKey } from '../brand'
 
 export interface StatementData {
   headline: string
@@ -7,6 +7,7 @@ export interface StatementData {
   supporting?: string
   cta: string
   photo?: string  // Optional photo path
+  illustrationKey?: IllustrationKey  // Optional accent illustration
 }
 
 interface Props {
@@ -77,6 +78,23 @@ export const StatementTemplate: React.FC<Props> = ({ data, format }) => {
         }}>
           {data.supporting}
         </div>
+      )}
+
+      {/* Optional accent illustration — bottom-right corner */}
+      {data.illustrationKey && (
+        <img
+          src={illustrations[data.illustrationKey]}
+          alt=""
+          style={{
+            position: 'absolute',
+            right: safe.sides + 10,
+            bottom: safe.bottom + 100,
+            height: isStory ? 280 : format === '1080x1350' ? 220 : 180,
+            objectFit: 'contain',
+            opacity: 0.22,
+            zIndex: 0,
+          }}
+        />
       )}
 
       {/* CTA button */}

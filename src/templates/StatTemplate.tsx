@@ -1,11 +1,12 @@
 import React from 'react'
-import { colors, fonts, formats, getSafePadding, logos, type FormatKey } from '../brand'
+import { colors, fonts, formats, getSafePadding, logos, illustrations, type FormatKey, type IllustrationKey } from '../brand'
 
 export interface StatData {
   stat: string
   phrase: string
   cta: string
   subtext?: string
+  illustrationKey?: IllustrationKey  // Optional accent illustration
 }
 
 interface Props {
@@ -57,8 +58,25 @@ export const StatTemplate: React.FC<Props> = ({ data, format }) => {
         </div>
       )}
 
+      {/* Optional accent illustration — bottom-right, behind CTA */}
+      {data.illustrationKey && (
+        <img
+          src={illustrations[data.illustrationKey]}
+          alt=""
+          style={{
+            position: 'absolute',
+            right: safe.sides,
+            bottom: safe.bottom + 100,
+            height: isStory ? 320 : format === '1080x1350' ? 260 : 220,
+            objectFit: 'contain',
+            opacity: 0.18,
+            zIndex: 0,
+          }}
+        />
+      )}
+
       {/* CTA button */}
-      <div style={{ position: 'absolute', bottom: safe.bottom + 60, left: safe.sides + 20 }}>
+      <div style={{ position: 'absolute', bottom: safe.bottom + 60, left: safe.sides + 20, zIndex: 1 }}>
         <div style={{ backgroundColor: colors.coral, color: colors.white, fontFamily: fonts.body, fontSize: ctaSize, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1, padding: '20px 48px', borderRadius: 4 }}>
           {data.cta}
         </div>
@@ -68,7 +86,7 @@ export const StatTemplate: React.FC<Props> = ({ data, format }) => {
       <img
         src={logos.academy}
         alt="SUE Behavioural Design Academy"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides + 20, height: 56, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides + 20, height: 56, objectFit: 'contain', zIndex: 1 }}
       />
     </div>
   )

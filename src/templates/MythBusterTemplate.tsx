@@ -1,10 +1,11 @@
 import React from 'react'
-import { colors, fonts, formats, getSafePadding, logos, type FormatKey } from '../brand'
+import { colors, fonts, formats, getSafePadding, logos, illustrations, type FormatKey, type IllustrationKey } from '../brand'
 
 export interface MythBusterData {
   myth: string           // The common belief
   truth: string          // The behavioural science reality
   cta?: string           // Usually soft CTA or none
+  illustrationKey?: IllustrationKey  // Optional illustration on truth side
 }
 
 interface Props {
@@ -171,11 +172,28 @@ export const MythBusterTemplate: React.FC<Props> = ({ data, format }) => {
         </div>
       )}
 
+      {/* Optional illustration — truth side, low opacity accent */}
+      {data.illustrationKey && (
+        <img
+          src={illustrations[data.illustrationKey]}
+          alt=""
+          style={{
+            position: 'absolute',
+            right: safe.sides + 20,
+            bottom: safe.bottom + 80,
+            height: format === '1080x1920' ? 240 : format === '1080x1350' ? 200 : 170,
+            objectFit: 'contain',
+            opacity: 0.15,
+            zIndex: 0,
+          }}
+        />
+      )}
+
       {/* Bol logo — bottom right, below CTA level */}
       <img
         src={logos.bol}
         alt="SUE"
-        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides + 10, height: 56, objectFit: 'contain' }}
+        style={{ position: 'absolute', bottom: safe.bottom + 14, right: safe.sides + 10, height: 56, objectFit: 'contain', zIndex: 1 }}
       />
     </div>
   )

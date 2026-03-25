@@ -73,6 +73,40 @@ export const photos = {
 
 export type PhotoKey = keyof typeof photos
 
+// ── Illustrations ──────────────────────────────────────────────────
+// Brand illustrations from DotYeti (served from /public/illustrations/)
+// Brain characters = TOFU brand awareness (coral brains with stick legs)
+// Icons = MOFU/BOFU course-specific (2025 round-face character set)
+// Line art = accent/background (minimalist Demmy SVGs)
+export const illustrations = {
+  // Coral brain characters (TOFU — brand awareness)
+  system12Chasing: `${BASE}illustrations/brains/system12-chasing.jpg`,
+  brainTyping: `${BASE}illustrations/brains/brain-typing.jpg`,
+  brainWriting: `${BASE}illustrations/brains/brain-writing.jpg`,
+  brainLaptop: `${BASE}illustrations/brains/brain-laptop.png`,
+  brainNotebook: `${BASE}illustrations/brains/brain-notebook.png`,
+  brainScale: `${BASE}illustrations/brains/brain-scale.png`,
+
+  // 2025 round-face icons (MOFU/BOFU — course-specific)
+  headBrain: `${BASE}illustrations/icons/head-brain.png`,
+  ideaSmile: `${BASE}illustrations/icons/idea-smile.png`,
+  idea: `${BASE}illustrations/icons/idea.png`,
+  heart: `${BASE}illustrations/icons/heart.png`,
+  team: `${BASE}illustrations/icons/team.png`,
+  globe: `${BASE}illustrations/icons/globe.png`,
+  lightbulb: `${BASE}illustrations/icons/lightbulb.png`,
+
+  // Minimalist line art SVGs (accents/background)
+  chaos: `${BASE}illustrations/line-art/chaos.svg`,
+  masker: `${BASE}illustrations/line-art/masker.svg`,
+  norm: `${BASE}illustrations/line-art/norm.svg`,
+  pech: `${BASE}illustrations/line-art/pech.svg`,
+  wolk: `${BASE}illustrations/line-art/wolk.svg`,
+  zak: `${BASE}illustrations/line-art/zak.svg`,
+}
+
+export type IllustrationKey = keyof typeof illustrations
+
 // Language type
 export type Language = 'NL' | 'EN'
 

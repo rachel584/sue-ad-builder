@@ -15,6 +15,8 @@ import { FrameworkTemplate, type FrameworkData } from './templates/FrameworkTemp
 import { CarouselSlideTemplate, type CarouselSlideData } from './templates/CarouselSlideTemplate'
 import { ThoughtLeaderTemplate, type ThoughtLeaderData } from './templates/ThoughtLeaderTemplate'
 import { DocumentAdTemplate, type DocumentAdData } from './templates/DocumentAdTemplate'
+import { IllustrationStatTemplate, type IllustrationStatData } from './templates/IllustrationStatTemplate'
+import { IllustrationConceptTemplate, type IllustrationConceptData } from './templates/IllustrationConceptTemplate'
 import { formats, type FormatKey, type Language, colors, photos } from './brand'
 
 // ── Template registry ──────────────────────────────────────────────
@@ -24,6 +26,7 @@ type TemplateType =
   | 'beforeAfter' | 'leadMagnet'
   | 'directOffer' | 'countdown'
   | 'framework' | 'carouselSlide' | 'thoughtLeader' | 'documentAd'
+  | 'illustrationStat' | 'illustrationConcept'
 
 type AnyData =
   | PatternInterruptData | StatData | ProvocativeQuestionData | MythBusterData
@@ -31,6 +34,7 @@ type AnyData =
   | BeforeAfterData | LeadMagnetData
   | DirectOfferData | CountdownData
   | FrameworkData | CarouselSlideData | ThoughtLeaderData | DocumentAdData
+  | IllustrationStatData | IllustrationConceptData
 
 interface TemplateInfo {
   label: string
@@ -54,6 +58,8 @@ const templateInfo: Record<TemplateType, TemplateInfo> = {
   carouselSlide:    { label: 'Carousel Slide',     stage: 'MOFU', stageLabel: 'Consideration', description: 'Numbered carousel step' },
   thoughtLeader:    { label: 'Thought Leader',     stage: 'MOFU', stageLabel: 'Consideration', description: 'Personal insight card' },
   documentAd:       { label: 'Document Ad',        stage: 'MOFU', stageLabel: 'Consideration', description: 'Mini playbook preview' },
+  illustrationStat: { label: 'Illustration + Stat', stage: 'TOFU', stageLabel: 'Awareness', description: 'Hero illustration + big stat number' },
+  illustrationConcept: { label: 'Illustration + Concept', stage: 'MOFU', stageLabel: 'Consideration', description: 'Hero illustration + course/concept name' },
 }
 
 // ── Sample data per template (ENGLISH) ─────────────────────────────
@@ -193,6 +199,18 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
       ],
       cta: 'Get the Guide',
     },
+  ],
+  illustrationStat: [
+    { stat: '70%', phrase: 'of change projects fail', illustrationKey: 'system12Chasing', cta: 'Learn the Influence Framework', subtext: 'Yours doesn\u2019t have to.' },
+    { stat: '95%', phrase: 'of decisions are made unconsciously', illustrationKey: 'brainScale', cta: 'Discover Behavioural Design', subtext: 'Yet most marketing targets the rational mind.' },
+    { stat: '80%', phrase: 'of training changes nothing', illustrationKey: 'brainLaptop', cta: 'See a Better Way', subtext: 'The problem isn\u2019t the people.' },
+    { stat: '75%', phrase: 'of employees can\u2019t use AI to its full potential', illustrationKey: 'headBrain', cta: 'Solve the Behaviour Problem' },
+  ],
+  illustrationConcept: [
+    { headline: 'Behavioural Design Fundamentals', illustrationKey: 'headBrain', tagline: 'Master the science of influence in 2 days', badge: '2-Day Training', cta: 'Explore the Course' },
+    { headline: 'AI for Behaviour Change', illustrationKey: 'ideaSmile', tagline: 'Turn AI adoption into a people strategy', badge: 'On-Demand', cta: 'Start Learning' },
+    { headline: 'The Influence Framework', illustrationKey: 'system12Chasing', tagline: 'The proven method behind successful change', cta: 'Learn the Method' },
+    { headline: 'Behavioural Marketing', illustrationKey: 'heart', tagline: 'Create campaigns that speak to System 1', badge: 'On-Demand', cta: 'Explore the Course' },
   ],
 }
 
@@ -334,6 +352,18 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
       cta: 'Download de gids',
     },
   ],
+  illustrationStat: [
+    { stat: '70%', phrase: 'van veranderprojecten faalt', illustrationKey: 'system12Chasing', cta: 'Ontdek het Influence Framework', subtext: 'Die van jou hoeft niet te falen.' },
+    { stat: '95%', phrase: 'van beslissingen is onbewust', illustrationKey: 'brainScale', cta: 'Ontdek Behavioural Design', subtext: 'Toch richt de meeste marketing zich op het rationele brein.' },
+    { stat: '80%', phrase: 'van trainingen verandert niets', illustrationKey: 'brainLaptop', cta: 'Bekijk een Betere Aanpak', subtext: 'Het probleem zijn niet de mensen.' },
+    { stat: '75%', phrase: 'van medewerkers benut AI niet volledig', illustrationKey: 'headBrain', cta: 'Los het Gedragsprobleem Op' },
+  ],
+  illustrationConcept: [
+    { headline: 'Behavioural Design Fundamentals', illustrationKey: 'headBrain', tagline: 'Beheers de wetenschap van invloed in 2 dagen', badge: '2-Daagse Training', cta: 'Bekijk de Training' },
+    { headline: 'AI for Behaviour Change', illustrationKey: 'ideaSmile', tagline: 'Maak van AI-adoptie een mensenstrategie', badge: 'On-Demand', cta: 'Start met Leren' },
+    { headline: 'Het Influence Framework', illustrationKey: 'system12Chasing', tagline: 'De bewezen methode achter succesvolle verandering', cta: 'Leer de Methode' },
+    { headline: 'Behavioural Marketing', illustrationKey: 'heart', tagline: 'Cre\u00EBer campagnes die Systeem 1 aanspreken', badge: 'On-Demand', cta: 'Bekijk de Training' },
+  ],
 }
 
 // ── Funnel stage colors ─────────────────────────────────────────────
@@ -439,6 +469,8 @@ function App() {
       case 'carouselSlide':       return <CarouselSlideTemplate {...props} />
       case 'thoughtLeader':       return <ThoughtLeaderTemplate {...props} />
       case 'documentAd':          return <DocumentAdTemplate {...props} />
+      case 'illustrationStat':    return <IllustrationStatTemplate {...props} />
+      case 'illustrationConcept': return <IllustrationConceptTemplate {...props} />
     }
   }
 
