@@ -205,12 +205,16 @@ const sampleDataEN: Record<TemplateType, AnyData[]> = {
     { stat: '95%', phrase: 'of decisions are made unconsciously', illustrationKey: 'brainScale', cta: 'Discover Behavioural Design', subtext: 'Yet most marketing targets the rational mind.' },
     { stat: '80%', phrase: 'of training changes nothing', illustrationKey: 'brainLaptop', cta: 'See a Better Way', subtext: 'The problem isn\u2019t the people.' },
     { stat: '75%', phrase: 'of employees can\u2019t use AI to its full potential', illustrationKey: 'headBrain', cta: 'Solve the Behaviour Problem' },
+    { stat: '50%', phrase: 'of training is forgotten within 2 weeks', illustrationKey: 'brainNotebook', cta: 'Make Training Stick', subtext: 'There\u2019s a science to retention.' },
+    { stat: '12%', phrase: 'of transformations succeed', illustrationKey: 'brainWriting', cta: 'Join the 12%', subtext: 'The other 88% ignored how people actually change.' },
   ],
   illustrationConcept: [
     { headline: 'Behavioural Design Fundamentals', illustrationKey: 'headBrain', tagline: 'Master the science of influence in 2 days', badge: '2-Day Training', cta: 'Explore the Course' },
     { headline: 'AI for Behaviour Change', illustrationKey: 'ideaSmile', tagline: 'Turn AI adoption into a people strategy', badge: 'On-Demand', cta: 'Start Learning' },
     { headline: 'The Influence Framework', illustrationKey: 'system12Chasing', tagline: 'The proven method behind successful change', cta: 'Learn the Method' },
     { headline: 'Behavioural Marketing', illustrationKey: 'heart', tagline: 'Create campaigns that speak to System 1', badge: 'On-Demand', cta: 'Explore the Course' },
+    { headline: 'Team Training Programme', illustrationKey: 'team', tagline: 'Upskill your entire organisation', badge: 'In-Company', cta: 'Get a Quote' },
+    { headline: 'Think Global, Nudge Local', illustrationKey: 'globe', tagline: 'Behavioural Design for international teams', cta: 'Learn More' },
   ],
 }
 
@@ -357,12 +361,16 @@ const sampleDataNL: Record<TemplateType, AnyData[]> = {
     { stat: '95%', phrase: 'van beslissingen is onbewust', illustrationKey: 'brainScale', cta: 'Ontdek Behavioural Design', subtext: 'Toch richt de meeste marketing zich op het rationele brein.' },
     { stat: '80%', phrase: 'van trainingen verandert niets', illustrationKey: 'brainLaptop', cta: 'Bekijk een Betere Aanpak', subtext: 'Het probleem zijn niet de mensen.' },
     { stat: '75%', phrase: 'van medewerkers benut AI niet volledig', illustrationKey: 'headBrain', cta: 'Los het Gedragsprobleem Op' },
+    { stat: '50%', phrase: 'van training is binnen 2 weken vergeten', illustrationKey: 'brainNotebook', cta: 'Laat Training Beklijven', subtext: 'Er is een wetenschap achter retentie.' },
+    { stat: '12%', phrase: 'van transformaties slaagt', illustrationKey: 'brainWriting', cta: 'Behoort tot de 12%', subtext: 'De andere 88% negeerde hoe mensen echt veranderen.' },
   ],
   illustrationConcept: [
     { headline: 'Behavioural Design Fundamentals', illustrationKey: 'headBrain', tagline: 'Beheers de wetenschap van invloed in 2 dagen', badge: '2-Daagse Training', cta: 'Bekijk de Training' },
     { headline: 'AI for Behaviour Change', illustrationKey: 'ideaSmile', tagline: 'Maak van AI-adoptie een mensenstrategie', badge: 'On-Demand', cta: 'Start met Leren' },
     { headline: 'Het Influence Framework', illustrationKey: 'system12Chasing', tagline: 'De bewezen methode achter succesvolle verandering', cta: 'Leer de Methode' },
     { headline: 'Behavioural Marketing', illustrationKey: 'heart', tagline: 'Cre\u00EBer campagnes die Systeem 1 aanspreken', badge: 'On-Demand', cta: 'Bekijk de Training' },
+    { headline: 'Team Training Programma', illustrationKey: 'team', tagline: 'Versterk je hele organisatie', badge: 'In-Company', cta: 'Vraag een Offerte' },
+    { headline: 'Denk Globaal, Nudge Lokaal', illustrationKey: 'globe', tagline: 'Behavioural Design voor internationale teams', cta: 'Meer Informatie' },
   ],
 }
 
