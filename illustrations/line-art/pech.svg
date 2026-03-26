@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="595.276" height="841.89" viewBox="0, 0, 595.276, 841.89">
+  <g id="Background">
+    <rect x="0" y="0" width="595.276" height="841.89" fill="#FFFFFF"/>
+  </g>
+  <g id="Layer_1">
+    <path d="M373.168,361.098 C364.504,404.42 253.216,435.731 236.254,414.528 C220.986,395.444 239.679,373.618 262.104,360.642 C284.926,346.542 368.371,332.18 372.547,361.411" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M252.53,366.815 C212.863,380.037 175.028,403.893 140.491,426.547 L140.491,426.547 C136.399,437.26 133.927,444.605 132.349,454.074 C123.53,506.987 116.843,560.413 110.638,613.808 C116.829,620.908 127.93,626.499 137.203,630.092" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M165.304,460.665 C153.29,510.471 148.134,561.745 139.715,612.257 C136.459,631.798 137.547,652.018 134.288,671.576 C131.279,689.625 132.649,708.55 129.635,726.63 C125.091,753.896 131.854,783.101 127.309,810.374" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M117.236,621.82 C108.132,679.125 105.985,741.936 105.985,800.682" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M373.885,361.098 C407.574,375.913 478.547,398.692 506.096,420.731 C512.194,446.237 513.886,458.552 516.952,476.949 C523.723,517.576 537.482,598.204 532.46,599.463 C494.388,609.009 471.382,615.219 432.363,621.722" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M404.517,806.11 C413.052,741.297 422.458,675.919 433.595,611.482 C436.39,522.988 437.085,483.754 437.085,481.213" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M505.864,606.894 C489.933,700.603 466.177,746.701 454.919,814.251" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="Layer_2">
+    <path d="M175.114,63.945 L175.114,63.945 L175.114,63.945 C176.177,63.945 177.274,63.721 177.563,63.445 C177.853,63.169 177.225,62.945 176.162,62.945 L176.162,62.945 C176.162,62.945 176.162,62.945 176.162,62.945 C175.098,62.945 174.002,63.169 173.712,63.445 C173.423,63.721 174.05,63.945 175.114,63.945 L175.114,63.945" fill="#000000"/>
+    <path d="M171.138,135.445 C129.602,144.047 137.225,227.104 187.782,202.227" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M190.138,189.945 C182.626,208.309 192.537,253.545 219.138,245.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M222.289,245.561 C230.314,317.785 319.791,290.501 328.619,255.592" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M329.638,255.445 C349.484,273.648 413.281,258 398.638,201.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M397.232,200.221 C449.795,236.734 478.739,136.945 442.138,136.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M157.689,142.04 C130.806,91.082 191.959,70.463 223.138,96.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M218.434,90.346 C254.79,30.896 309.359,44.538 329.434,87.846" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M327.415,79.848 C372.756,19.26 425.319,75.434 411.138,100.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M411.275,99.509 C440.165,81.051 464.641,117.966 444.177,136.022" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M188.638,154.945 C183.215,165.533 183.783,188.375 195.138,195.945 C200.047,199.218 210.44,200.631 216.138,201.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M219.882,179.356 C209.048,192.597 221.107,209.93 227.138,212.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M353.638,202.945 C383.225,213.452 411.638,196.216 411.638,164.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M399.138,160.945 C407.841,164.852 427.325,165.714 428.529,138.028" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M298.138,111.445 C313.017,93.857 349.885,69.014 374.361,109.54" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="'Layer_3">
+    <path d="M177.138,223.945 C176.954,231.546 178.138,238.867 178.138,246.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M179.5,264.5 C180.063,274.468 180,293.939 180,304" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M181,318.5 C181,325.5 181.138,340.445 181.138,347.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M181.5,372.5 C181.5,377 181.638,395.445 181.638,399.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M439.638,210.445 C439.999,219.562 439.638,228.447 439.638,237.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M437.638,266.445 C437.621,274.521 438.138,282.357 438.138,290.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M437.638,322.445 C437.345,330.288 436.335,338.627 437.638,346.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M436.638,373.945 C436.212,383.161 437.638,392.326 437.638,401.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M412.342,226.599 C412.342,236.599 412.342,246.599 412.342,256.599" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M411.94,277.753 C413.275,288.266 412.44,298.625 412.44,309.253" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M408.638,372.445 C409.472,373.337 408.971,374.445 409.138,375.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M408.638,368.945 C408.638,366.945 408.638,364.945 408.638,362.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M385.144,263.006 C386.13,275.396 385.194,273.648 385.194,290.501" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M383.138,347.945 C383.162,352.408 382.408,356.568 383.138,360.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M362.138,266.945 C362.138,274.778 362.138,282.612 362.138,290.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M361.138,313.945 C360.501,327.208 360.638,340.577 360.638,353.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M358.638,375.445 C358.638,376.612 358.638,377.778 358.638,378.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M330.138,269.445 C330.138,279.112 330.138,288.778 330.138,298.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M329.638,320.945 C330.546,331.618 330.138,342.637 330.138,353.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M327.638,378.445 C327.908,386.535 327.138,394.392 327.138,402.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300.532,316.18 C299.451,324.661 300.694,332.458 299.328,340.656" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300.138,363.445 C299.603,370.404 299.638,377.393 299.638,384.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300.138,406.445 C299.973,409.504 300.146,412.492 300.638,415.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M265.94,301.099 C264.436,312.294 265.098,323.863 265.098,335.216" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M266.827,351.49 C267.362,358.449 266.243,379.559 266.243,386.611" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M233.138,293.445 C234.022,306.68 231.967,320.418 234.138,333.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M233.638,355.445 C233.638,360.945 233.638,366.445 233.638,371.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M209.638,257.445 C210.653,268.551 209.809,279.971 211.638,290.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M208.638,309.945 C210.512,319.567 210.138,329.516 210.138,339.445" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M209.138,363.445 C208.999,373.996 208.638,384.355 208.638,394.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M383.991,306.149 C383.991,309.627 382.386,330.358 382.386,333.835" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M267.63,409.67 C267.999,412.753 267.63,415.455 267.63,418.498" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M300.532,302.137 C300.532,299.596 300.532,287.826 300.532,285.285" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M409.269,347.076 C409.55,339.909 410.473,333.08 410.473,325.81" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="Layer_4">
+    <path d="M232.274,554.684 C227.855,554.684 224.274,548.752 224.274,541.434 C224.274,534.116 227.855,528.184 232.274,528.184 C236.692,528.184 240.274,534.116 240.274,541.434 C240.274,548.752 236.692,554.684 232.274,554.684 z" fill="#000000"/>
+    <path d="M338.638,557.945 C334.22,557.945 330.638,552.237 330.638,545.195 C330.638,538.153 334.22,532.445 338.638,532.445 C343.056,532.445 346.638,538.153 346.638,545.195 C346.638,552.237 343.056,557.945 338.638,557.945 z" fill="#000000"/>
+    <path d="M341.685,568.118 C345.33,569.044 351.014,567.185 353.585,559.239" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M280.905,593.126 C281.901,608.307 247.486,645.007 284.411,641.735" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M294.138,701.445 C304.064,697.618 313.516,695.945 324.138,695.945" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M217.528,555.177 C216.859,559.411 220.25,564.272 226.97,565.795" fill-opacity="0" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
